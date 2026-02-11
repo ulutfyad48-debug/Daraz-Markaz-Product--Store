@@ -1,97 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="My Online Shop" />
-        <meta name="author" content="" />
-        <title>میری دکان - My Online Shop</title>
-        
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        
-        <link href="styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">میری دکان</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">خوش آمدید</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">یہاں آپ کو بہترین چیزیں ملیں گی</p>
-                </div>
-            </div>
-        </header>
-        
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="products-container">
-                    <div class="col mb-5">
-    <div class="card h-100">
-        <img class="card-img-top" src="https://drive.google.com/uc?export=view&id=1-n3aKl7-TPtrCQH4OV3wYvVWb3LD8E4Q" alt="Apple Product" style="height: 250px; object-fit: cover;" />
-        
-        <div class="card-body p-4">
-            <div class="text-center">
-                <h5 class="fw-bolder">Apple Product</h5>
-                <span class="text-muted text-decoration-line-through">Rs. 5000</span> Rs. 4500
-            </div>
-        </div>
-        
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-            <div class="text-center d-grid gap-2">
-                <a class="btn btn-outline-dark mt-auto" href="https://s.daraz.pk/s.1hyFE" target="_blank">
-                    <i class="bi-cart-fill me-1"></i> Order on Daraz (Link 1)
-                </a>
-                
-                <a class="btn btn-outline-primary mt-auto" href="https://s.daraz.pk/s.1hyFR" target="_blank">
-                    <i class="bi-cart-fill me-1"></i> Order on Daraz (Link 2)
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>میری پروفیشنل شاپ</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Product Image" />
-                            
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">پہلی پروڈکٹ کا نام</h5>
-                                    Rs. 1500
-                                </div>
-                            </div>
-                            
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center">
-                                    <a class="btn btn-outline-dark mt-auto" href="https://www.daraz.pk/" target="_blank">Buy on Daraz</a>
-                                </div>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --daraz-color: #f85606;
+            --markaz-color: #27ae60;
+        }
+
+        body {
+            font-family: 'Poppins', 'Noto Nastaliq Urdu', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Header Styling */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/1600x900/?shopping,store');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero-title {
+            font-weight: 700;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Search & Filter Section */
+        .controls-section {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .category-btn {
+            margin: 5px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Product Card Styling */
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-img-container {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .price-tag {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #95a5a6;
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+
+        /* Buttons Styling */
+        .btn-custom {
+            border-radius: 8px;
+            margin-bottom: 8px;
+            width: 100%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .btn-daraz {
+            background-color: white;
+            color: var(--daraz-color);
+            border: 2px solid var(--daraz-color);
+        }
+        .btn-daraz:hover {
+            background-color: var(--daraz-color);
+            color: white;
+        }
+
+        .btn-markaz {
+            background-color: white;
+            color: var(--markaz-color);
+            border: 2px solid var(--markaz-color);
+        }
+        .btn-markaz:hover {
+            background-color: var(--markaz-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        .social-link {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-link:hover {
+            color: var(--daraz-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">میری دکان</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">ہوم</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products-section">پروڈکٹس</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-section">رابطہ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section" id="main-header">
+        <div class="container">
+            <h1 class="hero-title">خوش آمدید</h1>
+            <p class="lead fs-4">پاکستان کی بہترین آن لائن شاپنگ ویب سائٹ</p>
+            <a href="#products-section" class="btn btn-primary btn-lg mt-3 rounded-pill px-5">ابھی خریدیں</a>
+        </div>
+    </header>
+
+    <div class="container" id="products-section">
+        <div class="controls-section">
+            <div class="row g-3 align-items-center">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+                        <input type="text" id="searchInput" class="form-control border-start-0" placeholder="پروڈکٹ تلاش کریں...">
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end text-center" id="categoryButtons">
+                    <button class="btn btn-outline-dark category-btn active" onclick="filterProducts('all')">سب دکھائیں</button>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4" id="productsContainer">
+            </div>
+    </div>
+
+    <footer id="contact-section">
+        <div class="container text-center">
+            <h3 class="mb-4">ہم سے رابطہ کریں</h3>
+            <div class="mb-4">
+                <a href="#" class="social-link" title="Contact Me"><i class="bi bi-envelope-fill"></i> Contact Me</a>
+                <a href="https://www.daraz.pk/" target="_blank" class="social-link" title="Follow on Daraz"><i class="bi bi-bag-fill"></i> Daraz Store</a>
+                <a href="#" target="_blank" class="social-link" title="Follow on Markaz"><i class="bi bi-shop"></i> Markaz App</a>
+            </div>
+            <p class="text-white-50">&copy; 2024 My Online Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // ==========================================
+        // یہاں آپ اپنی پروڈکٹس ایڈ کریں (DATABASE)
+        // ==========================================
+        
+        const products = [
+            {
+                id: 1,
+                title: "وائرلیس ہیڈ فون (Wireless Headphone)",
+                category: "electronics",
+                price: 4500,
+                oldPrice: 6000,
+                image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60", 
+                links: {
+                    daraz: "https://www.daraz.pk/products/xyz",
+                    markaz: "https://markaz.app/"
+                }
+            },
+            {
+                id: 2,
+                title: "مینز واچ (Men's Watch)",
+                category: "fashion",
+                price: 2500,
+                oldPrice: 3500,
+                image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500&auto=format&fit=crop&q=60",
+                links: {
+                    daraz: "https://www.daraz.pk/",
+                    markaz: "" // اگر لنک نہیں ہے تو خالی چھوڑ دیں
+                }
+            },
+            {
+                id: 3,
+                title: "اسمارٹ سن گلاسز",
+                category: "fashion",
+                price: 1200,
+                oldPrice: 2000,
+                image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&auto=format&fit=crop&q=60",
+                links: {
+                    daraz: "https://www.daraz.pk/",
+                    markaz: "https://markaz.app/"
+                }
+            },
+            {
+                id: 4,
+                title: "گیمنگ ماؤس",
+                category: "electronics",
+                price: 1800,
+                oldPrice: 2500,
+                image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&auto=format&fit=crop&q=60",
+                links: {
+                    daraz: "https://www.daraz.pk/",
+                    markaz: "https://markaz.app/"
+                }
+            },
+            // مزید پروڈکٹ ایڈ کرنے کے لیے اوپر والا بلاک کاپی کریں اور یہاں پیسٹ کریں
+        ];
+
+        // ==========================================
+        // نیچے کے کوڈ کو مت چھیڑیں (SYSTEM CODE)
+        // ==========================================
+
+        const productsContainer = document.getElementById('productsContainer');
+        const categoryButtons = document.getElementById('categoryButtons');
+        const searchInput = document.getElementById('searchInput');
+
+        // Extract unique categories
+        const categories = ['all', ...new Set(products.map(p => p.category))];
+
+        // Initialize
+        function init() {
+            renderCategories();
+            renderProducts(products);
+        }
+
+        // Render Categories Buttons
+        function renderCategories() {
+            const btnsHTML = categories.map(cat => {
+                const catName = cat === 'all' ? 'سب دکھائیں' : cat.charAt(0).toUpperCase() + cat.slice(1);
+                return `<button class="btn btn-outline-dark category-btn" onclick="filterProducts('${cat}')">${catName}</button>`;
+            }).join('');
+            categoryButtons.innerHTML = btnsHTML;
+            
+            // Set active class logic handled in filterProducts
+            filterProducts('all');
+        }
+
+        // Render Products Cards
+        function renderProducts(items) {
+            if (items.length === 0) {
+                productsContainer.innerHTML = '<div class="col-12 text-center py-5"><h3>کوئی پروڈکٹ نہیں ملی</h3></div>';
+                return;
+            }
+
+            productsContainer.innerHTML = items.map(product => `
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <div class="card-img-container">
+                            <img src="${product.image}" class="card-img-top" alt="${product.title}" onerror="this.src='https://dummyimage.com/400x300/dee2e6/6c757d.jpg&text=Image+Error'">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3">${product.title}</h5>
+                            <div class="mb-3">
+                                ${product.oldPrice ? `<span class="old-price">Rs. ${product.oldPrice}</span>` : ''}
+                                <span class="price-tag">Rs. ${product.price}</span>
                             </div>
                         </div>
+                        <div class="card-footer bg-transparent border-top-0 p-4 pt-0">
+                            ${product.links.daraz ? `
+                                <a href="${product.links.daraz}" target="_blank" class="btn btn-custom btn-daraz">
+                                    <i class="bi bi-bag-check-fill me-2"></i> Order on Daraz
+                                </a>
+                            ` : ''}
+                            ${product.links.markaz ? `
+                                <a href="${product.links.markaz}" target="_blank" class="btn btn-custom btn-markaz">
+                                    <i class="bi bi-shop me-2"></i> Order on Markaz
+                                </a>
+                            ` : ''}
+                        </div>
                     </div>
+                </div>
+            `).join('');
+        }
 
-                    </div>
-            </div>
-        </section>
-        
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; My Shop 2024</p></div>
-        </footer>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="scripts.js"></script>
-    </body>
+        // Filter Function
+        window.filterProducts = function(category) {
+            // Update buttons active state
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => {
+                if(btn.innerText.toLowerCase().includes(category === 'all' ? 'سب' : category.toLowerCase()) || 
+                   (category !== 'all' && btn.innerText.toLowerCase() === category.toLowerCase())) {
+                    btn.classList.add('active');
+                    btn.classList.remove('btn-outline-dark');
+                    btn.classList.add('btn-dark');
+                } else {
+                    btn.classList.remove('active');
+                    btn.classList.remove('btn-dark');
+                    btn.classList.add('btn-outline-dark');
+                }
+            });
+
+            const filtered = category === 'all' 
+                ? products 
+                : products.filter(p => p.category === category);
+            
+            renderProducts(filtered);
+        }
+
+        // Search Function
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filtered = products.filter(p => 
+                p.title.toLowerCase().includes(searchTerm)
+            );
+            renderProducts(filtered);
+        });
+
+        // Run on load
+        init();
+
+    </script>
+</body>
 </html>
