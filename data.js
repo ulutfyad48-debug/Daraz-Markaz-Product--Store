@@ -2,7 +2,7 @@
 const siteConfig = {
     brandName: "Elite Brands Pakistan",
     brandLogo: "https://cdn-icons-png.flaticon.com/512/3163/3163158.png", // اپنا لوگو یہاں لگائیں
-    mainSiteUrl: "https://digitalsiteshub.github.io/?update=1770975320024", // پہلے بٹن کے لیے لنک
+    mainSiteUrl: "https://digitalsiteshub.github.io/", // پہلے بٹن کے لیے لنک
     helpContact: "+923001234567" // واٹس ایپ نمبر
 };
 
