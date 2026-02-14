@@ -2,7 +2,7 @@
 
 const siteConfig = {
     brandName: "SOLUXE",
-    brandLogo: "https://cdn-icons-png.flaticon.com/512/3163/3163158.png", // یہاں اپنا لوگو لنک لگائیں
+    brandLogo: "https://lh3.googleusercontent.com/d/1Yp0ijtn--qitnUNRTZ71gML9UZnF7FAK/", // یہاں اپنا لوگو لنک لگائیں
     
     // وہ لنک جو ویب سائٹ کے اندر ہی کھلے گا (iframe میں)
     directShopUrl: "https://digitalsiteshub.github.io/", 
