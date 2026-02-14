@@ -18,7 +18,7 @@
             --font-en: 'Plus Jakarta Sans', sans-serif;
         }
 
-        body { font-family: var(--font-en); background: var(--bg-soft); color: var(--primary); padding-bottom: 70px; }
+        body { font-family: var(--font-en); background: var(--bg-soft); color: var(--primary); padding-bottom: 80px; }
         .urdu { font-family: var(--font-ur); line-height: 1.8; }
         
         /* Navbar */
@@ -58,10 +58,15 @@
         .p-img-box { height: 200px; overflow: hidden; position: relative; }
         .p-img-box img { width: 100%; height: 100%; object-fit: cover; }
         
-        /* Ads */
-        .ad-banner { 
-            background: #e9ecef; border: 1px dashed #adb5bd; color: #6c757d;
-            padding: 20px; text-align: center; margin: 20px 0; border-radius: 10px; font-size: 0.8rem;
+        /* Ads / Quotes Placeholder Style */
+        .custom-banner-space {
+            background: #eef2f5; 
+            border: 2px dashed #cbd5e1; 
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            color: #64748b;
         }
 
         /* Iframe Overlay */
@@ -73,9 +78,9 @@
         .overlay-frame { flex: 1; border: none; width: 100%; height: 100%; }
 
         /* Footer */
-        .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: white; border-top: 1px solid #eee; display: flex; justify-content: space-around; padding: 10px 0; z-index: 100; }
-        .nav-item { text-align: center; color: #666; text-decoration: none; font-size: 0.75rem; }
-        .nav-item i { display: block; font-size: 1.2rem; margin-bottom: 2px; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: white; border-top: 1px solid #eee; display: flex; justify-content: space-around; padding: 12px 0; z-index: 100; }
+        .nav-item { text-align: center; color: #666; text-decoration: none; font-size: 0.75rem; display: flex; flex-direction: column; align-items: center; }
+        .nav-item i { font-size: 1.3rem; margin-bottom: 2px; }
         .nav-item:hover { color: var(--gold); }
 
     </style>
@@ -83,7 +88,7 @@
 <body>
 
     <div class="top-nav">
-        <span class="badge bg-dark">VERIFIED</span>
+        <span class="badge bg-dark">VERIFIED STORE</span>
         <a href="help.html" class="btn btn-sm btn-outline-dark rounded-pill px-3">
             <i class="bi bi-question-circle"></i> Help
         </a>
@@ -102,11 +107,11 @@
         </header>
 
         <div class="container">
-            <div class="ad-banner">
-                <p>ADVERTISEMENT SPACE (Top)</p>
-            </div>
+            <div class="custom-banner-space">
+                <i class="bi bi-megaphone"></i>
+                <p class="mb-0 urdu small">یہاں پر آپ کوئی بھی اعلان یا اقوالِ زریں لکھ سکتے ہیں۔</p>
+                </div>
         </div>
-
         <div class="choice-container">
             <div class="choice-btn primary" onclick="openDirectShop()">
                 <div class="d-flex align-items-center">
@@ -153,16 +158,23 @@
             </div>
         </div>
 
-</div>
+        <div id="productsContainer" class="row g-3">
+            </div>
+
+    </div>
+
     <nav class="bottom-nav">
         <a href="contact.html" class="nav-item">
-            <i class="bi bi-envelope"></i> Contact
+            <i class="bi bi-envelope"></i>
+            <span>Contact</span>
         </a>
         <a href="about.html" class="nav-item">
-            <i class="bi bi-person-badge"></i> About
+            <i class="bi bi-person-badge"></i>
+            <span>About</span>
         </a>
         <a href="#" id="devLink" target="_blank" class="nav-item">
-            <i class="bi bi-code-slash"></i> Dev Hub
+            <i class="bi bi-grid-fill"></i>
+            <span>More Apps</span>
         </a>
     </nav>
 
@@ -247,7 +259,7 @@
                 p.links.forEach(link => {
                     let btnColor = link.name.toLowerCase().includes('whatsapp') ? 'btn-success' : 'btn-dark';
                     buttonsHTML += `
-                        <a href="${link.url}" target="_blank" class="btn btn-sm ${btnColor} flex-grow-1">
+                        <a href="${link.url}" target="_blank" class="btn btn-sm ${btnColor} flex-grow-1 text-nowrap">
                             <i class="bi ${link.icon}"></i> ${link.name}
                         </a>`;
                 });
@@ -260,12 +272,12 @@
                             <span class="position-absolute top-0 start-0 bg-warning small px-2 py-1 fw-bold m-2 rounded">${p.category}</span>
                         </div>
                         <div class="p-3">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <h6 class="fw-bold mb-1">${p.title}</h6>
-                                <span class="text-warning fw-bold">Rs.${p.price}</span>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h6 class="fw-bold mb-0 text-truncate">${p.title}</h6>
+                                <span class="text-success fw-bold">Rs.${p.price}</span>
                             </div>
-                            <p class="small text-muted urdu mb-3">${p.description}</p>
-                            <div class="d-flex gap-2">
+                            <p class="small text-muted urdu mb-3" style="min-height: 40px;">${p.description}</p>
+                            <div class="d-flex gap-2 flex-wrap">
                                 ${buttonsHTML}
                             </div>
                         </div>
