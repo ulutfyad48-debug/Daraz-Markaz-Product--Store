@@ -1,8 +1,8 @@
 /* data.js - تمام ڈیٹا اور سیٹنگز یہاں ہیں */
 
 const siteConfig = {
-    brandName: "SOLUXE",
-    brandLogo: "https://lh3.googleusercontent.com/d/1Yp0ijtn--qitnUNRTZ71gML9UZnF7FAK/", // یہاں اپنا لوگو لنک لگائیں
+    brandName: "SSelix",
+    brandLogo: "https://lh3.googleusercontent.com/d/1AYBfk-gmFobSzNUtiUSBVEcOdGGoEiii/", // یہاں اپنا لوگو لنک لگائیں
     
     // وہ لنک جو ویب سائٹ کے اندر ہی کھلے گا (iframe میں)
     directShopUrl: "https://digitalsiteshub.github.io/", 
