@@ -1,7 +1,7 @@
 /* data.js - تمام ڈیٹا اور سیٹنگز یہاں ہیں */
 
 const siteConfig = {
-    brandName: "Elite Brands Pakistan",
+    brandName: "SOLUXE",
     brandLogo: "https://cdn-icons-png.flaticon.com/512/3163/3163158.png", // یہاں اپنا لوگو لنک لگائیں
     
     // وہ لنک جو ویب سائٹ کے اندر ہی کھلے گا (iframe میں)
@@ -11,7 +11,7 @@ const siteConfig = {
     developerUrl: "https://digitalsiteshub.github.io/",
     
     // ہیلپ واٹس ایپ نمبر
-    whatsappNumber: "923001234567",
+    whatsappNumber: "+923102890002",
 
     // حدیث مبارکہ (Urdu & English)
     hadithUrdu: "سچا اور امانت دار تاجر (قیامت کے دن) انبیاء، صدیقین اور شہداء کے ساتھ ہوگا۔ (ترمذی: 1209)",
