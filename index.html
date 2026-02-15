@@ -3,35 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="yandex-verification" content="e9ee7f4c42c5151d" />
-    
-    <!-- Google Site Verification Meta Tags (All kept) -->
-    <meta name="google-site-verification" content="u0HQvmeVKbyBWL1oaDDylFERp4bmJKpg-IT7i_U0CmE" />
-    <meta name="google-site-verification" content="googleeddc628b2a5b5d0a" />
-    <meta name="google-site-verification" content="y-VK8JL6U04NL6Fh-c4bOtv4bO3lQsZ_FANLe_Y50WU" />
-    <meta name="msvalidate.01" content="F7B7B8E8C8D9E9F0A1B2C3D4E5F6G7H8" />
-    
     <title>SSelix | Premium Cosmetics & Beauty Store</title>
 
-    <meta name="description" content="SSelix is Pakistan's trusted source for premium cosmetics, makeup, skincare, and beauty products.">
-    <meta name="keywords" content="SSelix, Cosmetics Pakistan, Makeup Online, Skincare, Beauty Products">
-    <meta name="author" content="SSelix">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="SSelix - Enhance Your Beauty">
-    <meta property="og:description" content="Discover premium cosmetics and skincare products at SSelix.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sselix.github.io/">
-    <meta property="og:image" content="https://sselix.github.io/logo.png"> 
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#b76e79"> 
+    <meta name="google-site-verification" content="u0HQvmeVKbyBWL1oaDDylFERp4bmJKpg-IT7i_U0CmE" />
+    
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         :root {
-            /* Professional Cosmetic Color Palette */
             --primary: #2d2d2d; 
             --accent: #b76e79; 
             --accent-light: #fdf2f4; 
@@ -39,18 +20,9 @@
             --bg-soft: #fafafa;
             --white: #ffffff;
             --gold: #d4af37;
-            --rose-dark: #8b4c56;
             --font-ur: 'Noto Nastaliq Urdu', serif;
             --font-en: 'Plus Jakarta Sans', sans-serif;
             --shadow: 0 10px 30px rgba(0,0,0,0.08);
-            --shadow-lg: 0 20px 60px rgba(183, 110, 121, 0.25);
-            --shadow-xl: 0 30px 80px rgba(183, 110, 121, 0.3);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
 
         body {
@@ -59,73 +31,14 @@
             color: var(--primary);
             padding-bottom: 100px;
             overflow-x: hidden;
-            position: relative;
         }
 
-        /* Animated Background Effects */
-        .bg-decorative {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
-        }
+        .urdu { font-family: var(--font-ur); line-height: 2.2; direction: rtl; }
 
-        .floating-shape {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.15;
-            animation: floatShape 25s infinite ease-in-out;
-        }
-
-        .shape-1 {
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(183, 110, 121, 0.3), transparent);
-            top: 10%;
-            right: -150px;
-            animation-delay: 0s;
-        }
-
-        .shape-2 {
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.2), transparent);
-            bottom: 20%;
-            left: -100px;
-            animation-delay: 5s;
-        }
-
-        .shape-3 {
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(183, 110, 121, 0.25), transparent);
-            top: 50%;
-            left: 50%;
-            animation-delay: 10s;
-        }
-
-        @keyframes floatShape {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(30px, -30px) rotate(90deg); }
-            50% { transform: translate(-20px, 20px) rotate(180deg); }
-            75% { transform: translate(20px, 30px) rotate(270deg); }
-        }
-
-        .urdu { 
-            font-family: var(--font-ur); 
-            line-height: 2.2; 
-            direction: rtl;
-        }
-       
-        /* Premium Glassmorphism Navbar */
+        /* Navbar */
         .top-nav {
             background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(25px) saturate(180%);
-            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            backdrop-filter: blur(25px);
             padding: 18px 25px;
             display: flex;
             justify-content: space-between;
@@ -134,1815 +47,225 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid rgba(183, 110, 121, 0.15);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-            animation: slideDown 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
-        @keyframes slideDown {
-            from { transform: translateY(-100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+        .logo-mini { width: 45px; height: 45px; border-radius: 50%; border: 3px solid var(--accent); }
 
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--primary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .nav-brand:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-mini {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            border: 3px solid var(--accent);
-            padding: 2px;
-            background: white;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 5px 20px rgba(183, 110, 121, 0.2);
-        }
-
-        .logo-mini:hover {
-            transform: rotate(360deg) scale(1.15);
-            box-shadow: 0 10px 30px rgba(183, 110, 121, 0.4);
-        }
-
-        .help-link {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 10px 18px;
-            border-radius: 25px;
-            background: rgba(183, 110, 121, 0.1);
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .help-link:hover {
-            background: var(--accent);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(183, 110, 121, 0.3);
-        }
-
-        .help-link i {
-            font-size: 1.1rem;
-        }
-       
-        /* Luxurious Header Section */
+        /* Hero Section */
         .brand-hero {
             text-align: center;
             padding: 60px 25px 80px;
-            background: linear-gradient(135deg, 
-                rgba(255, 249, 250, 0.95) 0%, 
-                rgba(254, 245, 247, 1) 50%, 
-                rgba(255, 249, 250, 0.95) 100%);
+            background: linear-gradient(135deg, rgba(255, 249, 250, 0.95), rgba(254, 245, 247, 1));
             border-bottom-left-radius: 45px;
             border-bottom-right-radius: 45px;
-            position: relative;
-            overflow: hidden;
             box-shadow: 0 15px 50px rgba(183, 110, 121, 0.12);
-            animation: fadeInUp 0.8s ease-out;
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .brand-hero::before {
-            content: '';
-            position: absolute;
-            top: -40%;
-            right: -15%;
-            width: 550px;
-            height: 550px;
-            background: radial-gradient(circle, rgba(183, 110, 121, 0.12), transparent 70%);
-            border-radius: 50%;
-            animation: pulse 12s infinite ease-in-out;
-        }
-
-        .brand-hero::after {
-            content: '';
-            position: absolute;
-            bottom: -35%;
-            left: -12%;
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1), transparent 70%);
-            border-radius: 50%;
-            animation: pulse 15s infinite ease-in-out;
-            animation-delay: 3s;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.4; }
-            50% { transform: scale(1.3) rotate(180deg); opacity: 0.7; }
-        }
-       
         .brand-logo {
-            width: 130px;
-            height: 130px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid white;
-            box-shadow: 0 20px 60px rgba(183, 110, 121, 0.35);
-            margin-bottom: 22px;
-            background: white;
-            padding: 3px;
-            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            position: relative;
-            z-index: 2;
-            animation: logoFloat 4s infinite ease-in-out;
+            width: 130px; height: 130px; border-radius: 50%; border: 5px solid white;
+            box-shadow: 0 20px 60px rgba(183, 110, 121, 0.35); margin-bottom: 22px;
         }
 
-        @keyframes logoFloat {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-12px) rotate(5deg); }
-        }
+        .brand-name { font-size: 2.2rem; font-weight: 800; color: var(--accent); letter-spacing: 3px; }
 
-        .brand-logo:hover { 
-            transform: scale(1.2) rotate(-5deg); 
-            box-shadow: 0 25px 70px rgba(183, 110, 121, 0.5);
-            border-color: var(--accent);
-        }
-
-        .brand-name {
-            font-size: 2.2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #2d2d2d 0%, #b76e79 50%, #2d2d2d 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 12px;
-            position: relative;
-            z-index: 2;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            animation: textShine 4s infinite;
-        }
-
-        @keyframes textShine {
-            0%, 100% { filter: brightness(1) contrast(1); }
-            50% { filter: brightness(1.3) contrast(1.1); }
-        }
-
-        .brand-subtitle {
-            color: var(--accent);
-            letter-spacing: 4px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            position: relative;
-            z-index: 2;
-            margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .brand-subtitle::before,
-        .brand-subtitle::after {
-            content: '';
-            width: 40px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-        }
-       
-        /* Premium Hadith Card with Gradient Border */
+        /* Hadith Card */
         .hadith-card {
-            background: white;
-            border: 3px solid transparent;
-            background-image: linear-gradient(white, white), 
-                              linear-gradient(135deg, #b76e79 0%, #d4af37 100%);
-            background-origin: border-box;
-            background-clip: padding-box, border-box;
-            padding: 35px 30px;
-            margin: 40px auto 20px;
-            max-width: 680px;
-            border-radius: 25px;
-            font-size: 0.95rem;
-            text-align: center;
-            box-shadow: var(--shadow-xl);
-            position: relative;
-            z-index: 2;
-            animation: fadeIn 1s ease-out 0.4s backwards;
+            background: white; border: 3px solid var(--accent);
+            padding: 30px; margin: 40px auto; max-width: 680px; border-radius: 25px;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        .hadith-card::before {
-            content: '"';
-            position: absolute;
-            top: -15px;
-            left: 25px;
-            font-size: 5rem;
-            color: var(--accent);
-            opacity: 0.15;
-            font-family: Georgia, serif;
-            font-weight: bold;
-        }
-
-        .hadith-urdu {
-            font-family: var(--font-ur);
-            font-size: 1.15rem;
-            line-height: 2.5;
-            color: var(--primary);
-            margin-bottom: 15px;
-            direction: rtl;
-            font-weight: 500;
-        }
-
-        .hadith-english {
-            font-family: var(--font-en);
-            font-size: 0.9rem;
-            line-height: 1.7;
-            color: #666;
-            font-style: italic;
-        }
-
-        /* Decorative Quote Section Above Shop Collection */
-        .decorative-quote {
-            max-width: 650px;
-            margin: 45px auto 35px;
-            padding: 0 25px;
-            position: relative;
-            z-index: 5;
-            animation: fadeInScale 0.7s ease-out 0.6s backwards;
-        }
-
-        @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.9) translateY(20px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
-        }
-
-        .quote-box {
-            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(253,242,244,0.9));
-            backdrop-filter: blur(15px);
-            border: 2px dashed var(--accent);
-            border-radius: 30px;
-            padding: 30px 25px;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 15px 40px rgba(183, 110, 121, 0.15);
-        }
-
-        .quote-icon {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(183, 110, 121, 0.2);
-        }
-
-        .quote-icon i {
-            font-size: 1.5rem;
-            color: var(--accent);
-        }
-
-        .quote-text {
-            font-family: var(--font-ur);
-            font-size: 1.3rem;
-            line-height: 2.3;
-            color: var(--accent-dark);
-            direction: rtl;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        /* Premium Choice Buttons */
-        .choice-container {
-            max-width: 650px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 10;
-            padding: 0 25px;
-        }
-
+        /* Choice Buttons */
+        .choice-container { max-width: 650px; margin: 0 auto; padding: 0 25px; }
         .choice-btn {
-            background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
-            border: 2px solid rgba(183, 110, 121, 0.15);
-            color: var(--primary);
-            padding: 28px 25px;
-            border-radius: 28px;
-            width: 100%;
-            margin-bottom: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.07);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+            background: white; border: 2px solid rgba(183, 110, 121, 0.15);
+            padding: 25px; border-radius: 28px; width: 100%; margin-bottom: 22px;
+            display: flex; align-items: center; justify-content: space-between;
+            transition: 0.4s; cursor: pointer;
         }
+        .choice-btn:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(183, 110, 121, 0.2); }
+        .choice-btn.primary { background: var(--primary); color: white; border: none; }
 
-        .choice-btn::before {
-            content: '';
-            position: absolute;
-            top: 0; 
-            left: -150%; 
-            width: 150%; 
-            height: 100%;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                rgba(183, 110, 121, 0.15) 50%, 
-                transparent 100%);
-            transition: 0.8s;
-        }
-
-        .choice-btn:hover::before {
-            left: 150%;
-        }
-
-        .choice-btn::after {
-            content: '';
-            position: absolute;
-            top: 0; 
-            left: 0; 
-            width: 7px; 
-            height: 100%;
-            background: linear-gradient(180deg, #b76e79 0%, #d4af37 100%);
-            opacity: 0;
-            transition: 0.4s;
-            border-radius: 28px 0 0 28px;
-        }
-
-        .choice-btn:hover { 
-            transform: translateY(-10px) translateX(8px) scale(1.02); 
-            box-shadow: 0 25px 60px rgba(183, 110, 121, 0.3);
-            border-color: var(--accent);
-        }
-
-        .choice-btn:hover::after { 
-            opacity: 1; 
-        }
-
-        .choice-btn:active {
-            transform: translateY(-7px) scale(0.98);
-        }
-       
-        /* Primary Dark Button */
-        .choice-btn.primary {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-            background-size: 200% 200%;
-            color: white;
-            border: none;
-            box-shadow: 0 18px 45px rgba(45, 45, 45, 0.35);
-            animation: gradientShift 6s ease infinite;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .choice-btn.primary:hover {
-            box-shadow: 0 25px 70px rgba(45, 45, 45, 0.55);
-        }
-
-        .choice-btn.primary::after {
-            background: linear-gradient(180deg, #ffffff 0%, #b76e79 100%);
-        }
-
-        .choice-btn.primary .choice-text p { 
-            color: rgba(255, 255, 255, 0.8); 
-        }
-
-        .choice-btn.primary .choice-icon {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 50%;
-        }
-       
-        .choice-icon { 
-            font-size: 2.8rem; 
-            margin-right: 25px;
-            transition: all 0.4s ease;
-            flex-shrink: 0;
-        }
-
-        .choice-btn:hover .choice-icon {
-            transform: scale(1.25) rotate(-10deg);
-        }
-
-        .choice-text {
-            flex: 1;
-            text-align: right;
-        }
-
-        .choice-text h5 { 
-            margin: 0 0 10px 0; 
-            font-weight: 700; 
-            font-size: 1.35rem;
-            letter-spacing: 0.5px;
-        }
-
-        .choice-text p { 
-            margin: 0; 
-            font-size: 0.95rem; 
-            opacity: 0.85; 
-            font-family: var(--font-ur);
-            direction: rtl; 
-            line-height: 1.8;
-        }
-
-        .choice-arrow {
-            font-size: 1.5rem;
-            opacity: 0.7;
-            transition: all 0.3s ease;
-            margin-left: 15px;
-            flex-shrink: 0;
-        }
-
-        .choice-btn:hover .choice-arrow {
-            opacity: 1;
-            transform: translateX(-8px);
-        }
-
-        /* Catalog Section & Shop Section */
-        #catalogSection, #shopSection { 
-            display: none; 
-            padding-top: 35px; 
-            animation: slideInRight 0.6s ease-out; 
-        }
-
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(60px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        .back-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
-            padding: 0 20px;
-        }
-
-        .back-btn {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: white;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(183, 110, 121, 0.2);
-        }
-
-        .back-btn:hover {
-            background: var(--accent);
-            color: white;
-            transform: translateX(5px) scale(1.1);
-            box-shadow: 0 8px 30px rgba(183, 110, 121, 0.4);
-        }
-
-        .back-btn i {
-            font-size: 1.2rem;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 0;
-        }
-
-        /* Enhanced Search & Filter */
-        .search-filter-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 15px;
-            margin-bottom: 30px;
-            padding: 0 20px;
-        }
-
-        .search-box {
-            background: white;
-            padding: 15px 25px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-            border: 2px solid rgba(183, 110, 121, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .search-box:focus-within {
-            border-color: var(--accent);
-            box-shadow: 0 15px 45px rgba(183, 110, 121, 0.25);
-            transform: translateY(-3px);
-        }
-
-        .search-box input { 
-            border: none; 
-            outline: none; 
-            width: 100%; 
-            padding: 5px 15px; 
-            font-size: 1rem;
-            background: transparent;
-            color: var(--primary);
-        }
-
-        .search-box input::placeholder {
-            color: #999;
-        }
-
-        .search-box i { 
-            color: var(--accent);
-            font-size: 1.3rem;
-            transition: transform 0.3s ease;
-        }
-
-        .search-box:focus-within i {
-            transform: scale(1.2) rotate(90deg);
-        }
-
-        .filter-select {
-            background: white;
-            border: 2px solid rgba(183, 110, 121, 0.1);
-            border-radius: 50px;
-            padding: 12px 20px;
-            font-size: 0.95rem;
-            color: var(--primary);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-            font-weight: 600;
-        }
-
-        .filter-select:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 15px 45px rgba(183, 110, 121, 0.25);
-        }
-       
-        /* Ultra-Premium Product Cards */
+        /* Product Cards */
         .product-card {
-            background: white;
-            border-radius: 28px;
-            overflow: hidden;
-            border: none;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.06);
-            height: 100%;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            display: flex;
-            flex-direction: column;
-            position: relative;
+            background: white; border-radius: 28px; overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.06); height: 100%; transition: 0.4s;
         }
+        .p-img-box { height: 260px; position: relative; }
+        .p-img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .category-badge { position: absolute; top: 15px; left: 15px; background: white; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; }
+        .price-tag { background: var(--accent); color: white; padding: 8px 15px; border-radius: 20px; font-weight: 800; }
+        .product-info { padding: 20px; }
 
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(183, 110, 121, 0.08), transparent 60%);
-            opacity: 0;
-            transition: 0.5s;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .product-card:hover::before {
-            opacity: 1;
-        }
-
-        .product-card:hover { 
-            transform: translateY(-15px) scale(1.03); 
-            box-shadow: 0 25px 70px rgba(183, 110, 121, 0.25);
-        }
-       
-        .p-img-box {
-            height: 260px;
-            overflow: hidden;
-            position: relative;
-            background: linear-gradient(135deg, #fafafa, #ffffff);
-        }
-
-        .p-img-box::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60%;
-            background: linear-gradient(to top, rgba(255,255,255,0.9), transparent);
-            opacity: 0;
-            transition: 0.5s;
-        }
-
-        .product-card:hover .p-img-box::after {
-            opacity: 1;
-        }
-
-        .p-img-box img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            transition: all 0.7s ease;
-        }
-
-        .product-card:hover .p-img-box img { 
-            transform: scale(1.2) rotate(2deg);
-            filter: brightness(1.15) contrast(1.05);
-        }
-       
-        .category-badge {
-            position: absolute;
-            top: 18px; 
-            left: 18px;
-            background: rgba(255,255,255,0.98);
-            backdrop-filter: blur(12px);
-            color: var(--primary);
-            font-size: 0.7rem;
-            padding: 10px 18px;
-            border-radius: 30px;
-            font-weight: 700;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            z-index: 2;
-            border: 2px solid rgba(183, 110, 121, 0.25);
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover .category-badge {
-            background: var(--accent);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .price-tag {
-            background: linear-gradient(135deg, #b76e79 0%, #8b4553 100%);
-            color: white;
-            padding: 10px 18px;
-            border-radius: 25px;
-            font-weight: 800;
-            font-size: 1rem;
-            box-shadow: 0 8px 20px rgba(183, 110, 121, 0.35);
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-        }
-
-        .product-info {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            position: relative;
-            z-index: 2;
-        }
-
-        .product-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            gap: 12px;
-        }
-
-        .product-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin: 0;
-            flex: 1;
-            line-height: 1.4;
-        }
-
-        .product-desc {
-            font-size: 0.9rem;
-            color: #666;
-            font-family: var(--font-ur);
-            line-height: 2;
-            margin-bottom: 20px;
-            flex-grow: 1;
-            direction: rtl;
-        }
-
-        .product-actions {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: auto;
-        }
-
-        .product-btn {
-            flex: 1;
-            min-width: 120px;
-            padding: 12px 20px;
-            border-radius: 30px;
-            border: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            cursor: pointer;
-        }
-
-        .product-btn.whatsapp {
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            color: white;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
-        }
-
-        .product-btn.whatsapp:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
-        }
-
-        .product-btn.dark {
-            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-            color: white;
-            box-shadow: 0 8px 20px rgba(45, 45, 45, 0.3);
-        }
-
-        .product-btn.dark:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(45, 45, 45, 0.5);
-        }
-
-        /* Shop Section Styles - نئے آرڈرنگ سسٹم کے لیے */
-        .shop-container {
-            padding: 0 20px 40px;
-        }
-
-        .cart-items {
-            background: white;
-            border-radius: 25px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .cart-item:last-child {
-            border-bottom: none;
-        }
-
-        .cart-item-info {
-            flex: 2;
-        }
-
-        .cart-item-title {
-            font-weight: 600;
-            margin-bottom: 5px;
-            font-size: 0.95rem;
-        }
-
-        .cart-item-price {
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .cart-item-quantity {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .qty-btn {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            border: 2px solid var(--accent);
-            background: white;
-            color: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .qty-btn:hover {
-            background: var(--accent);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .qty-value {
-            font-weight: 700;
-            min-width: 30px;
-            text-align: center;
-        }
-
-        .cart-item-total {
-            font-weight: 700;
-            min-width: 80px;
-            text-align: left;
-            color: var(--primary);
-        }
-
-        .cart-summary {
-            background: linear-gradient(135deg, #f8f9fa, #ffffff);
-            border-radius: 20px;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        .summary-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px dashed #ddd;
-        }
-
-        .summary-row.total {
-            border-bottom: none;
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: var(--accent-dark);
-            padding-top: 15px;
-        }
-
-        .delivery-info {
-            color: #28a745;
-            font-size: 0.9rem;
-        }
-
-        .checkout-form {
-            background: white;
-            border-radius: 25px;
-            padding: 25px;
-            margin-top: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--primary);
-            font-family: var(--font-ur);
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 15px 20px;
-            border: 2px solid #f0f0f0;
-            border-radius: 50px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            background: #fafafa;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 5px 20px rgba(183, 110, 121, 0.2);
-            background: white;
-        }
-
-        select.form-control {
-            appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: left 20px center;
-            background-size: 15px;
-        }
-
-        .province-hint {
-            font-size: 0.85rem;
-            color: #666;
-            margin-top: 5px;
-            font-family: var(--font-ur);
-        }
-
-        .btn-order {
-            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-            color: white;
-            border: none;
-            padding: 18px 30px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            width: 100%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(183, 110, 121, 0.3);
-        }
-
-        .btn-order:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(183, 110, 121, 0.4);
-        }
-
-        .btn-order:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .stock-badge {
-            background: #28a745;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            margin-right: 10px;
-        }
-
-        .empty-cart {
-            text-align: center;
-            padding: 50px 20px;
-            color: #999;
-        }
-
-        .empty-cart i {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-
-        /* Bottom Navigation */
+        /* Bottom Nav */
         .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(25px) saturate(180%);
-            -webkit-backdrop-filter: blur(25px) saturate(180%);
-            display: flex;
-            justify-content: space-around;
-            padding: 15px 0 calc(15px + env(safe-area-inset-bottom));
-            box-shadow: 0 -8px 40px rgba(0,0,0,0.12);
-            border-top: 2px solid rgba(183, 110, 121, 0.15);
-            z-index: 999;
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: white; display: flex; justify-content: space-around;
+            padding: 15px 0; border-top: 2px solid rgba(183, 110, 121, 0.15); z-index: 999;
         }
+        .nav-item { text-decoration: none; color: var(--primary); font-size: 0.7rem; text-align: center; }
 
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: var(--primary);
-            font-size: 0.7rem;
-            padding: 10px 15px;
-            border-radius: 18px;
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            position: relative;
-            font-weight: 600;
-        }
-
-        .nav-item::before {
-            content: '';
-            position: absolute;
-            top: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), var(--gold));
-            border-radius: 0 0 10px 10px;
-            transition: 0.4s;
-        }
-
-        .nav-item:hover::before {
-            width: 60%;
-        }
-
-        .nav-item i {
-            font-size: 1.4rem;
-            margin-bottom: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-item:hover {
-            background: rgba(183, 110, 121, 0.1);
-            color: var(--accent);
-            transform: translateY(-5px) scale(1.1);
-        }
-
-        .nav-item:hover i {
-            transform: scale(1.2);
-        }
-
-        .nav-item span {
-            font-size: 0.75rem;
-            margin-top: 2px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .brand-name {
-                font-size: 1.8rem;
-            }
-
-            .brand-logo {
-                width: 110px;
-                height: 110px;
-            }
-
-            .hadith-urdu {
-                font-size: 1rem;
-            }
-
-            .quote-text {
-                font-size: 1.1rem;
-            }
-
-            .choice-text h5 {
-                font-size: 1.15rem;
-            }
-
-            .choice-text p {
-                font-size: 0.85rem;
-            }
-
-            .choice-icon {
-                font-size: 2.3rem;
-            }
-
-            .search-filter-row {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-item span {
-                font-size: 0.65rem;
-            }
-
-            .nav-item i {
-                font-size: 1.2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .brand-hero {
-                padding: 50px 20px 70px;
-            }
-
-            .hadith-card {
-                padding: 25px 20px;
-                margin: 30px auto 15px;
-            }
-
-            .decorative-quote {
-                margin: 35px auto 25px;
-            }
-
-            .quote-box {
-                padding: 25px 20px;
-            }
-
-            .choice-btn {
-                padding: 25px 20px;
-            }
-
-            .product-info {
-                padding: 20px;
-            }
-        }
-
-        /* Smooth Transitions & Animations */
-        * {
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        button, a, input, select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-        }
-
-        /* Loading Animation */
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-
-        .loading {
-            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-            background-size: 1000px 100%;
-            animation: shimmer 2s infinite;
-        }
-
-        /* No Products Message */
-        .no-products {
-            text-align: center;
-            padding: 80px 20px;
-            color: #999;
-        }
-
-        .no-products i {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            opacity: 0.5;
-        }
-
-        .no-products p {
-            font-size: 1.1rem;
-            font-family: var(--font-ur);
-            direction: rtl;
-        }
-
-        /* Toast Notification */
+        /* Sections visibility */
+        #catalogSection, #shopSection { display: none; padding-top: 30px; }
+        
+        /* Toast */
         .toast-notification {
-            position: fixed;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            z-index: 2000;
-            display: none;
-            animation: slideUp 0.3s ease;
-        }
-
-        @keyframes slideUp {
-            from { transform: translateX(-50%) translateY(100px); opacity: 0; }
-            to { transform: translateX(-50%) translateY(0); opacity: 1; }
+            position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%);
+            background: #2d2d2d; color: white; padding: 12px 25px; border-radius: 50px;
+            display: none; z-index: 2000;
         }
     </style>
 </head>
 <body>
-    <!-- Decorative Background -->
-    <div class="bg-decorative">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-    </div>
 
-    <!-- Toast Notification -->
     <div id="toast" class="toast-notification"></div>
 
-    <!-- Top Navigation -->
     <nav class="top-nav">
-        <a href="#" class="nav-brand">
+        <a href="#" class="nav-brand" style="text-decoration: none; color: black; font-weight: bold;">
             <img id="navLogo" src="logo.png" alt="SSelix" class="logo-mini">
             <span>OFFICIAL STORE</span>
         </a>
-        <a href="help.html" class="help-link">
-            <i class="bi bi-headset"></i>
-            <span>Help Center</span>
-        </a>
     </nav>
 
-    <!-- Home View -->
     <div id="homeView">
-        <!-- Brand Hero Section -->
         <section class="brand-hero">
             <img id="brandLogo" src="logo.png" alt="SSelix Logo" class="brand-logo">
             <h1 id="brandName" class="brand-name">SSelix</h1>
-            <p class="brand-subtitle">Premium Beauty</p>
-            
-            <!-- Hadith Card -->
             <div class="hadith-card">
-                <p id="hUrdu" class="hadith-urdu">
-                    سچا اور امانت دار تاجر (قیامت کے دن) انبیاء، صدیقین اور شہداء کے ساتھ ہوگا۔ (ترمذی: 1209)
-                </p>
-                <p id="hEng" class="hadith-english">
-                    "The honest and trustworthy merchant will be with the prophets, the truthful, and the martyrs." (Tirmidhi)
-                </p>
+                <p id="hUrdu" class="urdu">سچا اور امانت دار تاجر (قیامت کے دن) انبیاء، صدیقین اور شہداء کے ساتھ ہوگا۔</p>
+                <p id="hEng" style="font-style: italic; font-size: 0.9rem;">"The honest and trustworthy merchant will be with the prophets..."</p>
             </div>
         </section>
 
-        <!-- Decorative Quote Above Shop Collection -->
-        <div class="decorative-quote">
-            <div class="quote-box">
-                <div class="quote-icon">
-                    <i class="bi bi-stars"></i>
-                </div>
-                <p class="quote-text">
-                    بیوٹی کا الٹرا سیٹرا فی ہر لمحہ: عیار پروڈکٹس
-                </p>
-            </div>
-        </div>
-
-        <!-- Choice Buttons -->
         <div class="choice-container">
             <div class="choice-btn primary" onclick="openShop()">
-                <i class="bi bi-bag-heart-fill choice-icon"></i>
-                <div class="choice-text">
-                    <h5>Shop Collection</h5>
-                    <p class="urdu">ویب سائٹ کے ذریعے براہ راست خریداری کریں</p>
+                <div style="text-align: right;">
+                    <h5 style="margin:0;">Shop Collection</h5>
+                    <p class="urdu" style="margin:0; font-size: 0.8rem;">براہ راست خریداری کریں</p>
                 </div>
-                <i class="bi bi-arrow-left choice-arrow"></i>
+                <i class="bi bi-bag-heart-fill" style="font-size: 2rem;"></i>
             </div>
 
             <div class="choice-btn" onclick="showCatalog()">
-                <i class="bi bi-grid-3x3-gap-fill choice-icon"></i>
-                <div class="choice-text">
-                    <h5>View Catalog</h5>
-                    <p class="urdu">کیٹلاگ دیکھیں</p>
+                <div style="text-align: right;">
+                    <h5 style="margin:0;">View Catalog</h5>
+                    <p class="urdu" style="margin:0; font-size: 0.8rem;">کیٹلاگ دیکھیں</p>
                 </div>
-                <i class="bi bi-chevron-left choice-arrow"></i>
+                <i class="bi bi-grid-3x3-gap-fill" style="font-size: 2rem; color: var(--accent);"></i>
             </div>
         </div>
     </div>
 
-    <!-- Catalog Section -->
     <div class="container" id="catalogSection">
-        <div class="back-header">
-            <div class="back-btn" onclick="goHome()">
-                <i class="bi bi-arrow-right"></i>
-            </div>
-            <h4 class="section-title">ہماری مصنوعات</h4>
-        </div>
-
-        <div class="search-filter-row">
-            <div class="search-box">
-                <i class="bi bi-search"></i>
-                <input type="text" id="searchInput" placeholder="تلاش کریں..." onkeyup="renderProducts()">
-            </div>
-            <select class="filter-select" id="catFilter" onchange="renderProducts()">
-                <option value="All">تمام اقسام</option>
-            </select>
-        </div>
-
-        <div id="productsContainer" class="row g-3 px-3">
-        </div>
+        <button class="btn btn-outline-dark mb-4" onclick="goHome()">واپس جائیں</button>
+        <div id="productsContainer" class="row g-4"></div>
     </div>
 
-    <!-- Shop Section - نیا آرڈرنگ سسٹم -->
     <div class="container" id="shopSection">
-        <div class="back-header">
-            <div class="back-btn" onclick="goHome()">
-                <i class="bi bi-arrow-right"></i>
-            </div>
-            <h4 class="section-title">شاپنگ کارٹ</h4>
-        </div>
-
-        <div class="shop-container">
-            <!-- Cart Items -->
-            <div class="cart-items" id="cartItems">
-                <div class="empty-cart" id="emptyCart">
-                    <i class="bi bi-cart"></i>
-                    <p>آپ کی کارٹ خالی ہے</p>
-                    <small>براہ کرم پروڈکٹس منتخب کریں</small>
-                </div>
-            </div>
-
-            <!-- Cart Summary -->
-            <div class="cart-summary" id="cartSummary" style="display: none;">
-                <div class="summary-row">
-                    <span>کل قیمت (آئٹمز):</span>
-                    <span id="subtotal">Rs.0</span>
-                </div>
-                <div class="summary-row">
-                    <span>ڈلیوری چارجز:</span>
-                    <span id="deliveryCharge">Rs.0</span>
-                </div>
-                <div class="summary-row delivery-info" id="freeDeliveryMsg" style="display: none;">
-                    <span>✨ مفت ڈلیوری!</span>
-                </div>
-                <div class="summary-row total">
-                    <span>ٹوٹل بل:</span>
-                    <span id="totalAmount">Rs.0</span>
-                </div>
-            </div>
-
-            <!-- Checkout Form -->
-            <div class="checkout-form" id="checkoutForm" style="display: none;">
-                <form id="orderForm" onsubmit="submitOrder(event)">
-                    <div class="form-group">
-                        <label>آپ کا نام <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="fullName" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>ای میل <span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>واٹس ایپ نمبر <span class="text-danger">*</span></label>
-                        <input type="tel" class="form-control" id="phone" placeholder="+92XXXXXXXXXX" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>شہر <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="city" oninput="detectProvince()" placeholder="مثلاً: پشاور" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>صوبہ <span class="text-danger">*</span></label>
-                        <select class="form-control" id="province" onchange="updateDeliveryCharge()" required>
-                            <option value="">صوبہ منتخب کریں</option>
-                            <option value="peshawar">پشاور</option>
-                            <option value="kpk">خیبرپختونخوا (پشاور کے علاوہ)</option>
-                            <option value="other">دوسرے صوبے</option>
-                        </select>
-                        <div class="province-hint" id="provinceHint"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>مکمل پتہ <span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="address" rows="3" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-order" id="submitBtn">
-                        آرڈر کی تصدیق کریں
-                    </button>
-                </form>
-            </div>
-        </div>
+        <button class="btn btn-outline-dark mb-4" onclick="goHome()">واپس جائیں</button>
+        <div id="cartItems" class="mb-4"></div>
+        <div id="orderFormContainer">
+             </div>
     </div>
 
-    <!-- Bottom Navigation -->
     <nav class="bottom-nav">
-        <a href="contact.html" class="nav-item">
-            <i class="bi bi-chat-dots-fill"></i>
-            <span>Contact</span>
+        <a href="#" class="nav-item">
+            <i class="bi bi-chat-dots-fill"></i><br>Contact
         </a>
-        <a href="about.html" class="nav-item">
-            <i class="bi bi-flower1"></i>
-            <span>About</span>
-        </a>
-        <a href="terms.html" class="nav-item">
-            <i class="bi bi-shield-check-fill"></i>
-            <span>Terms</span>
-        </a>
-        <a href="#" id="devLink" target="_blank" class="nav-item">
-            <i class="bi bi-grid-fill"></i>
-            <span>More Apps</span>
+        <a href="https://digitalsiteshub.github.io/" target="_blank" class="nav-item">
+            <i class="bi bi-grid-fill"></i><br>More Apps
         </a>
         <a href="https://ulutfyad48-debug.github.io/Bachatino/" target="_blank" class="nav-item">
-            <i class="bi bi-bag-fill"></i>
-            <span>Bachatino</span>
+            <i class="bi bi-bag-fill"></i><br>Bachatino
         </a>
     </nav>
 
-    <!-- External Scripts -->
-    <script src="data.js"></script>
-    
     <script>
-        // --- گلوبل ویری ایبلز ---
-        let cart = []; // شاپنگ کارٹ
-        let currentDeliveryCharge = 0;
-        
-        // ڈیلیوری کنفیگریشن - data.js سے لیا جائے گا
-        const deliveryConfig = window.deliveryConfig || {
-            peshawar: 100,
-            khyberPakhtunkhwa: 200,
-            otherProvinces: 300,
-            freeDeliveryThreshold: 3000
+        // --- ڈیٹا کنفیگریشن ---
+        const siteConfig = {
+            brandName: "SSelix",
+            brandLogo: "logo.png",
+            developerUrl: "https://digitalsiteshub.github.io/",
+            whatsappNumber: "+923102890002"
         };
 
-        // --- انیشیالائزیشن ---
-        window.onload = function() {
-            // siteConfig لوڈ کریں
-            if(typeof siteConfig !== 'undefined') {
-                document.getElementById('brandName').innerText = siteConfig.brandName;
-                document.getElementById('brandLogo').src = siteConfig.brandLogo;
-                document.getElementById('navLogo').src = siteConfig.brandLogo;
-                document.getElementById('hUrdu').innerText = siteConfig.hadithUrdu;
-                document.getElementById('hEng').innerText = siteConfig.hadithEnglish;
-                document.getElementById('devLink').href = siteConfig.developerUrl;
-            }
+        const products = [
+          {
+            id: 1,
+            title: "Maybelline Fit Me Foundation",
+            category: "فاؤنڈیشن",
+            price: 2850,
+            description: "میبلین فٹ می فاؤنڈیشن - بہترین میٹ فنش۔",
+            image: "https://images.unsplash.com/photo-1631730359585-38a4935cbec4?w=400",
+            stock: 15
+          },
+          {
+            id: 2,
+            title: "Vitamin C Serum 20%",
+            category: "اسکن کیئر",
+            price: 1250,
+            description: "وٹامن سی سیرم - جلد کو نکھارے۔",
+            image: "https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?w=400",
+            stock: 20
+          }
+        ];
 
-            // کیٹیگریز لوڈ کریں
-            if(typeof products !== 'undefined') {
-                const categories = ['All', ...new Set(products.map(p => p.category))];
-                const catSelect = document.getElementById('catFilter');
-                catSelect.innerHTML = '<option value="All">تمام اقسام</option>';
-                categories.forEach(cat => {
-                    if(cat !== 'All') {
-                        let opt = document.createElement('option');
-                        opt.value = cat; 
-                        opt.innerText = cat;
-                        catSelect.appendChild(opt);
-                    }
-                });
-                renderProducts();
-            }
-
-            // کارٹ کو localStorage سے لوڈ کریں
-            loadCart();
-            
-            // ہوم ویو دکھائیں
-            document.getElementById('homeView').style.display = 'block';
-            document.getElementById('catalogSection').style.display = 'none';
-            document.getElementById('shopSection').style.display = 'none';
-        };
-
-        // --- نیویگیشن فنکشنز ---
-        function openShop() {
-            document.getElementById('homeView').style.display = 'none';
-            document.getElementById('catalogSection').style.display = 'none';
-            document.getElementById('shopSection').style.display = 'block';
-            renderCart();
-            window.scrollTo(0,0);
-        }
-
+        // --- فنکشنز ---
         function showCatalog() {
             document.getElementById('homeView').style.display = 'none';
             document.getElementById('shopSection').style.display = 'none';
             document.getElementById('catalogSection').style.display = 'block';
-            renderProducts(); // ری رینڈر کریں
-            window.scrollTo(0,0);
+            renderProducts();
+        }
+
+        function openShop() {
+            document.getElementById('homeView').style.display = 'none';
+            document.getElementById('catalogSection').style.display = 'none';
+            document.getElementById('shopSection').style.display = 'block';
+            document.getElementById('cartItems').innerHTML = '<p class="text-center">آپ کی کارٹ فی الحال خالی ہے، کیٹلاگ سے چیزیں منتخب کریں۔</p>';
         }
 
         function goHome() {
             document.getElementById('catalogSection').style.display = 'none';
             document.getElementById('shopSection').style.display = 'none';
             document.getElementById('homeView').style.display = 'block';
-            window.scrollTo(0,0);
         }
 
-        // --- پروڈکٹس رینڈر کریں (Catalog) ---
         function renderProducts() {
             const container = document.getElementById('productsContainer');
-            const search = document.getElementById('searchInput').value.toLowerCase();
-            const filter = document.getElementById('catFilter').value;
-
             container.innerHTML = '';
-
-            if(typeof products === 'undefined') return;
-
-            const filtered = products.filter(p => {
-                const matchesSearch = p.title.toLowerCase().includes(search) || 
-                                    p.description.toLowerCase().includes(search);
-                const matchesCat = filter === 'All' || p.category === filter;
-                return matchesSearch && matchesCat;
-            });
-
-            if(filtered.length === 0) {
-                container.innerHTML = `
-                    <div class="col-12 no-products">
-                        <i class="bi bi-emoji-frown"></i>
-                        <p>کوئی پروڈکٹ نہیں ملا</p>
-                    </div>`;
-                return;
-            }
-
-            filtered.forEach(p => {
-                // چیک کریں کہ پروڈکٹ میں یو آر ایل ہے یا نہیں
-                const hasExternalLink = p.externalUrl && p.externalUrl !== '#';
-                
-                const html = `
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="product-card">
-                        <div class="p-img-box">
-                            <img src="${p.image}" alt="${p.title}">
-                            <span class="category-badge">${p.category}</span>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-header">
-                                <h6 class="product-title">${p.title}</h6>
-                                <span class="price-tag">Rs.${p.priceFormatted || p.price.toLocaleString()}</span>
+            products.forEach(p => {
+                container.innerHTML += `
+                    <div class="col-12 col-md-6">
+                        <div class="product-card">
+                            <div class="p-img-box">
+                                <img src="${p.image}">
+                                <span class="category-badge">${p.category}</span>
                             </div>
-                            <p class="product-desc">${p.description}</p>
-                            <div class="product-actions">
-                                ${hasExternalLink ? 
-                                    `<a href="${p.externalUrl}" target="_blank" class="product-btn whatsapp">
-                                        <i class="bi bi-box-arrow-up-right"></i> خریدیں
-                                    </a>` : 
-                                    `<button onclick="addToCart(${p.id})" class="product-btn dark">
-                                        <i class="bi bi-cart-plus"></i> کارٹ میں شامل کریں
-                                    </button>`
-                                }
+                            <div class="product-info">
+                                <h6>${p.title}</h6>
+                                <p class="urdu small">${p.description}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">Rs.${p.price}</span>
+                                    <button class="btn btn-dark btn-sm" onclick="showToast('کارٹ فنکشن لوڈ ہو رہا ہے...')">خریدیں</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>`;
-                container.innerHTML += html;
-            });
-        }
-
-        // --- کارٹ فنکشنز ---
-        function loadCart() {
-            const savedCart = localStorage.getItem('sselixCart');
-            if(savedCart) {
-                try {
-                    cart = JSON.parse(savedCart);
-                } catch(e) {
-                    cart = [];
-                }
-            } else {
-                cart = [];
-            }
-        }
-
-        function saveCart() {
-            localStorage.setItem('sselixCart', JSON.stringify(cart));
-        }
-
-        function addToCart(productId) {
-            const product = products.find(p => p.id === productId);
-            if(!product) return;
-
-            const existingItem = cart.find(item => item.id === productId);
-            
-            if(existingItem) {
-                if(existingItem.quantity < product.stock) {
-                    existingItem.quantity++;
-                    showToast(`"${product.title}" کی مقدار بڑھا دی گئی`);
-                } else {
-                    showToast('اسٹاک ختم!', 'error');
-                    return;
-                }
-            } else {
-                cart.push({
-                    id: product.id,
-                    title: product.title,
-                    price: product.price,
-                    quantity: 1,
-                    maxStock: product.stock,
-                    image: product.image
-                });
-                showToast(`"${product.title}" کارٹ میں شامل`);
-            }
-
-            saveCart();
-            if(document.getElementById('shopSection').style.display === 'block') {
-                renderCart();
-            }
-        }
-
-        function updateQuantity(productId, change) {
-            const item = cart.find(item => item.id === productId);
-            if(!item) return;
-
-            const newQuantity = item.quantity + change;
-            
-            if(newQuantity <= 0) {
-                // آئٹم ہٹا دیں
-                cart = cart.filter(item => item.id !== productId);
-                showToast('آئٹم کارٹ سے ہٹا دیا گیا');
-            } else {
-                const product = products.find(p => p.id === productId);
-                if(product && newQuantity <= product.stock) {
-                    item.quantity = newQuantity;
-                } else {
-                    showToast('اسٹاک ختم!', 'error');
-                    return;
-                }
-            }
-
-            saveCart();
-            renderCart();
-        }
-
-        function renderCart() {
-            const cartContainer = document.getElementById('cartItems');
-            const cartSummary = document.getElementById('cartSummary');
-            const checkoutForm = document.getElementById('checkoutForm');
-            const emptyCart = document.getElementById('emptyCart');
-
-            if(cart.length === 0) {
-                emptyCart.style.display = 'block';
-                cartSummary.style.display = 'none';
-                checkoutForm.style.display = 'none';
-                return;
-            }
-
-            emptyCart.style.display = 'none';
-            cartSummary.style.display = 'block';
-            checkoutForm.style.display = 'block';
-
-            let cartHTML = '';
-            let subtotal = 0;
-
-            cart.forEach(item => {
-                const product = products.find(p => p.id === item.id);
-                const itemTotal = item.price * item.quantity;
-                subtotal += itemTotal;
-
-                cartHTML += `
-                    <div class="cart-item">
-                        <div class="cart-item-info">
-                            <div class="cart-item-title">${item.title}</div>
-                            <div class="cart-item-price">Rs.${item.price.toLocaleString()}</div>
-                        </div>
-                        <div class="cart-item-quantity">
-                            <button class="qty-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
-                            <span class="qty-value">${item.quantity}</span>
-                            <button class="qty-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
-                        </div>
-                        <div class="cart-item-total">Rs.${itemTotal.toLocaleString()}</div>
                     </div>
                 `;
             });
-
-            cartContainer.innerHTML = cartHTML;
-
-            // اپڈیٹ سمری
-            document.getElementById('subtotal').innerText = `Rs.${subtotal.toLocaleString()}`;
-            
-            // ڈلیوری چارج اپڈیٹ کریں
-            updateDeliveryCharge(subtotal);
         }
 
-        function updateDeliveryCharge(subtotal) {
-            if(!subtotal) {
-                subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            }
-
-            const province = document.getElementById('province').value;
-            let deliveryCharge = 0;
-
-            switch(province) {
-                case 'peshawar':
-                    deliveryCharge = deliveryConfig.peshawar;
-                    break;
-                case 'kpk':
-                    deliveryCharge = deliveryConfig.khyberPakhtunkhwa;
-                    break;
-                case 'other':
-                    deliveryCharge = deliveryConfig.otherProvinces;
-                    break;
-                default:
-                    deliveryCharge = 0;
-            }
-
-            // فری ڈلیوری چیک کریں
-            const freeDeliveryMsg = document.getElementById('freeDeliveryMsg');
-            if(subtotal >= deliveryConfig.freeDeliveryThreshold) {
-                deliveryCharge = 0;
-                freeDeliveryMsg.style.display = 'flex';
-            } else {
-                freeDeliveryMsg.style.display = 'none';
-            }
-
-            currentDeliveryCharge = deliveryCharge;
-            document.getElementById('deliveryCharge').innerText = `Rs.${deliveryCharge.toLocaleString()}`;
-            
-            const total = subtotal + deliveryCharge;
-            document.getElementById('totalAmount').innerText = `Rs.${total.toLocaleString()}`;
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.innerText = msg;
+            t.style.display = 'block';
+            setTimeout(() => t.style.display = 'none', 3000);
         }
 
-        function detectProvince() {
-            const city = document.getElementById('city').value.toLowerCase().trim();
-            const provinceSelect = document.getElementById('province');
-            const hint = document.getElementById('provinceHint');
-
-            // پشاور ڈیٹیکٹ کریں
-            if(city.includes('پشاور') || city.includes('peshawar') || city.includes('Peshawar')) {
-                provinceSelect.value = 'peshawar';
-                hint.innerText = 'پشاور کا انتخاب کیا گیا';
-            } 
-            // خیبرپختونخوا کے دیگر شہر
-            else if(['مردان', 'صوابی', 'نوشہرہ', 'چارسدہ', 'کوہاٹ', 'بنوں', 'ڈیرہ اسماعیل خان', 'ایبٹ آباد', 'ہری پور', 'مانسہرہ'].some(c => city.includes(c))) {
-                provinceSelect.value = 'kpk';
-                hint.innerText = 'خیبرپختونخوا کا انتخاب کیا گیا';
-            } else {
-                hint.innerText = '';
-            }
-
-            updateDeliveryCharge();
-        }
-
-        // --- آرڈر سبمٹ ---
-        function submitOrder(event) {
-            event.preventDefault();
-
-            // چیک کریں کہ کارٹ خالی تو نہیں
-            if(cart.length === 0) {
-                showToast('آپ کی کارٹ خالی ہے!', 'error');
-                return;
-            }
-
-            // فارم ڈیٹا اکٹھا کریں
-            const formData = {
-                name: document.getElementById('fullName').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                city: document.getElementById('city').value,
-                province: document.getElementById('province').value,
-                address: document.getElementById('address').value,
-                items: cart.map(item => ({
-                    title: item.title,
-                    quantity: item.quantity,
-                    price: item.price,
-                    total: item.price * item.quantity
-                })),
-                subtotal: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
-                deliveryCharge: currentDeliveryCharge,
-                total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0) + currentDeliveryCharge,
-                orderDate: new Date().toLocaleString('pk-PK', { timeZone: 'Asia/Karachi' })
-            };
-
-            // پراوِنڈس چیک کریں
-            if(!formData.province) {
-                showToast('براہ کرم صوبہ منتخب کریں', 'error');
-                return;
-            }
-
-            // واٹس ایپ میسج تیار کریں
-            let whatsappMessage = `🛍️ *نیا آرڈر - SSelix*\n\n`;
-            whatsappMessage += `👤 *نام:* ${formData.name}\n`;
-            whatsappMessage += `📧 *ای میل:* ${formData.email}\n`;
-            whatsappMessage += `📱 *واٹس ایپ:* ${formData.phone}\n`;
-            whatsappMessage += `🏙️ *شہر:* ${formData.city}\n`;
-            whatsappMessage += `📍 *صوبہ:* ${getProvinceName(formData.province)}\n`;
-            whatsappMessage += `🏠 *پتہ:* ${formData.address}\n\n`;
-            whatsappMessage += `📦 *آرڈر کی تفصیل:*\n`;
-            
-            formData.items.forEach((item, index) => {
-                whatsappMessage += `${index + 1}. ${item.title}\n`;
-                whatsappMessage += `   مقدار: ${item.quantity} x Rs.${item.price.toLocaleString()} = Rs.${item.total.toLocaleString()}\n`;
-            });
-            
-            whatsappMessage += `\n💰 *سب ٹوٹل:* Rs.${formData.subtotal.toLocaleString()}\n`;
-            whatsappMessage += `🚚 *ڈلیوری چارجز:* Rs.${formData.deliveryCharge.toLocaleString()}\n`;
-            whatsappMessage += `💵 *ٹوٹل:* Rs.${formData.total.toLocaleString()}\n`;
-            whatsappMessage += `📅 *تاریخ:* ${formData.orderDate}`;
-
-            // واٹس ایپ پر بھیجیں
-            const whatsappUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappUrl, '_blank');
-
-            // ای میل بھیجیں (میلٹو لنک کے ذریعے)
-            const emailSubject = encodeURIComponent(`نیا آرڈر: ${formData.name} - Rs.${formData.total.toLocaleString()}`);
-            const emailBody = encodeURIComponent(whatsappMessage.replace(/\*/g, ''));
-            const mailtoUrl = `mailto:${siteConfig.contactEmail}?subject=${emailSubject}&body=${emailBody}`;
-            window.open(mailtoUrl, '_blank');
-
-            // کارٹ خالی کریں
-            cart = [];
-            saveCart();
-            renderCart();
-
-            // کامیابی کا میسج
-            showToast('آپ کا آرڈر موصول ہو گیا ہے! شکریہ');
-
-            // فارم ری سیٹ کریں
-            document.getElementById('orderForm').reset();
-        }
-
-        function getProvinceName(provinceCode) {
-            switch(provinceCode) {
-                case 'peshawar': return 'پشاور';
-                case 'kpk': return 'خیبرپختونخوا';
-                case 'other': return 'دوسرے صوبے';
-                default: return provinceCode;
-            }
-        }
-
-        // --- ٹوسٹ فنکشن ---
-        function showToast(message, type = 'success') {
-            const toast = document.getElementById('toast');
-            toast.innerText = message;
-            toast.style.backgroundColor = type === 'success' ? '#28a745' : '#dc3545';
-            toast.style.display = 'block';
-            
-            setTimeout(() => {
-                toast.style.display = 'none';
-            }, 3000);
-        }
-
-        // --- پرانے فنکشنز کو ڈیلیٹ کریں ---
-        window.openDirectShop = function() {
-            openShop();
+        // پیج لوڈ ہونے پر سیٹنگز اپلائی کریں
+        window.onload = () => {
+            document.getElementById('brandName').innerText = siteConfig.brandName;
         };
-
-        window.closeDirectShop = function() {
-            // پرانا فنکشن - اب استعمال نہیں ہوتا
-        };
-    </script>
-
-    <!-- PWA Service Worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
-                .then(() => console.log("PWA Ready"))
-                .catch(error => console.log("PWA Error", error));
-        }
     </script>
 </body>
 </html>
