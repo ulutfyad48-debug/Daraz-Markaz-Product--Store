@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-SSelix
-</title>
-  <!-- Font & Icons (professional touch) -->
+  <title>SSelix</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -333,7 +330,7 @@ SSelix
 
 <header>
   <div class="logo">
-    <i class="fas fa-store-alt"></i> UrbanStore
+    <i class="fas fa-store-alt"></i> SSelix
   </div>
   <div class="search-wrapper">
     <i class="fas fa-search"></i>
@@ -341,15 +338,12 @@ SSelix
   </div>
 </header>
 
-<!-- product container -->
 <div class="products" id="productContainer"></div>
 
-<!-- floating cart -->
 <div class="cart-btn" onclick="openCart()">
   <i class="fas fa-shopping-bag"></i>
 </div>
 
-<!-- popup modal -->
 <div class="popup" id="popup">
   <div class="popup-content">
     <h3>Complete order</h3>
@@ -365,7 +359,6 @@ SSelix
       <option value="other">Other Province — Rs 400</option>
     </select>
 
-    <!-- total display -->
     <div class="total-row">
       <span>Total</span>
       <span id="totalAmount">Rs 0</span>
@@ -398,15 +391,12 @@ SSelix
   const PICKUP_ADDRESS = "Your Pickup Address Here";
 
   // ======== PRODUCTS (with working image hosting) ========
-  // IMPORTANT: For Google Drive images, use direct links from "uc?export=view&id=FILE_ID"
-  // If they don't appear, replace with your own hosted images (sample working URLs below)
   const PRODUCTS = [
     {
       id: 1,
       title: "Urban Classic Hoodie",
       description: "Premium cotton, modern fit",
       price: 1500,
-      // Using a placeholder from unsplash (reliable)
       image: "https://lh3.googleusercontent.com/d/1lS9uwVLmnD38I_-CvRCc2WEczMgjSKQ3"
     },
     {
@@ -437,7 +427,7 @@ SSelix
 
   const container = document.getElementById("productContainer");
 
-  // helper to render product list (respects current cart quantities)
+  // helper to render product list
   function displayProducts(list) {
     container.innerHTML = "";
     if (!list.length) {
@@ -518,7 +508,6 @@ SSelix
 
   // send order on whatsapp
   window.sendOrder = function() {
-    // basic validation
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
     if (!name || !phone) {
@@ -548,7 +537,6 @@ SSelix
       other: "Other Province (Rs 400)"
     }[deliveryMethod] || deliveryMethod;
 
-    // calculate total again
     let subtotal = 0;
     for (let id in cart) if (cart[id] > 0) {
       const product = PRODUCTS.find(p => p.id == id);
@@ -559,7 +547,6 @@ SSelix
 
     const email = document.getElementById("email").value.trim() || "(not provided)";
 
-    // build message (formatted for WhatsApp)
     let message = `🛒 *NEW ORDER* 🛒\n`;
     message += `-----------------\n`;
     message += `${orderDetails}\n`;
@@ -578,26 +565,15 @@ SSelix
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, '_blank');
   };
 
-  // optional: close popup if click outside (simple)
   document.getElementById("popup").addEventListener("click", function(e) {
     if (e.target === this) closeCart();
   });
 
-  // update total if cart changes (called from increase/decrease)
-  // but we can also attach a small observer – for simplicity we recalc inside openCart
-  // also if you want real‑time update when changing qty while popup open, you can call calculateTotal from increase/decrease
-  // but careful: popup may be hidden, so we only call when popup is visible.
-  // We'll patch increase/decrease to recalc if popup open
   const originalIncrease = window.increase;
   window.increase = function(id) {
     originalIncrease(id);
     if (document.getElementById("popup").style.display === "flex") calculateTotal();
   };
-  window.decrease = function(id) {
-    originalDecrease(id);
-    if (document.getElementById("popup").style.display === "flex") calculateTotal();
-  };
-  // store original decrease
   const originalDecrease = window.decrease;
   window.decrease = function(id) {
     originalDecrease(id);
