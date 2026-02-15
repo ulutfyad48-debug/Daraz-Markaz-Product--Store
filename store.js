@@ -1,6 +1,6 @@
 // ======== SETTINGS ========
 
-const WHATSAPP_NUMBER = "923001234567"; // اپنا نمبر ڈالیں
+const WHATSAPP_NUMBER = "92310 2890002"; // اپنا نمبر ڈالیں
 
 const DELIVERY_CHARGES = {
   pickup: 0,
