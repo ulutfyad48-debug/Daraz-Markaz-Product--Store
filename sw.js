@@ -1,9 +1,7 @@
 const CACHE_NAME = "ai-tools-cache-v1";
 const urlsToCache = [
-  "/TopAIToolsHub/videoMakingTools.html",
-  "/TopAIToolsHub/index.html",
-  "/TopAIToolsHub/assets/styles.css",
-  "/TopAIToolsHub/assets/script.js"
+  "/TopAIToolsHub/",
+  "/TopAIToolsHub/index.html"
 ];
 
 self.addEventListener("install", (event) => {
